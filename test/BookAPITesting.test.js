@@ -1,13 +1,31 @@
+const ReadingList = require('../src/index');
+
 // Given that I visit the site, when I first start, I expect my list to be empty.
-('I expect my list to be empty',()=>{
-    //Arrange
-    const list = 0;
+// test('I expect my list to be empty',()=>{
+//     //Arrange
+//     const list = 0;
 
-    ReadingList readingObject = new ReadingList();
+//     readingObject = new ReadingList();
 
-    //Act
+//     //Act
+//     const okayList = readingObject.numberRead();
+
+//     // Assert
+//     expect(list).toBe(okayList);
+// })
+
+
+//Given that I have an empty list, when I add the first book to my list then I expect numberRead to return 1.
+test('I expect numberRead to return 1',()=>{
+    const list = 1;
+
+    addBook = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
+    readingObject = new ReadingList();
+
+    readingObject.addBook(addBook, 'January 1, 2020', 5);
+
     const okayList = readingObject.numberRead();
 
-    // Assert
-    expect(list).toBe(okayList);
+     // Assert
+     expect(list).toBe(okayList);
 })
