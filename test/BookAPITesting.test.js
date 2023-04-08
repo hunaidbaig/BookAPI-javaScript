@@ -1,4 +1,5 @@
-const ReadingList = require('../src/index');
+const ReadingList = require('../src/ReadingList');
+const Book = require('../src/Book');
 
 // Given that I visit the site, when I first start, I expect my list to be empty.
 // test('I expect my list to be empty',()=>{
@@ -19,10 +20,10 @@ const ReadingList = require('../src/index');
 test('I expect numberRead to return 1',()=>{
     const list = 1;
 
-    addBook = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
+    bookObject = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
     readingObject = new ReadingList();
 
-    readingObject.addBook(addBook, 'January 1, 2020', 5);
+    readingObject.addBook(bookObject, 'January 1, 2020', 5);
 
     const okayList = readingObject.numberRead();
 
