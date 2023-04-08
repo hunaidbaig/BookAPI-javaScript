@@ -13,6 +13,10 @@ class ReadingList {
         this.bookList.push(`${book.title} by ${book.author}, ${book.pages} pages, ${book.publishYear} read on ${dateRead}, ${rate}`)
     }
 
+    getBook(){
+        return this.bookList;
+    }
+
     removeBook(title){
         const indexNumber = this.bookList.forEach((element, index) => {
         if(element.includes(title)){
