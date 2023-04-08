@@ -33,7 +33,7 @@ test('I expect numberRead to return 1',()=>{
 
 //Given that I have an empty list, when I add additional books to the list I expect the numberRead to return the total number of books in my list.
 test('I expect numberRead to return same when added same',()=>{
-    const list = 3;
+    const list = 4;
 
     bookObject1 = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
     bookObject2 = new Book('The History', 'J.R.R. Tolkein', 320, 1937);
