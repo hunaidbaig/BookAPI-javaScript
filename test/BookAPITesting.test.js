@@ -98,3 +98,26 @@ test('I expect when I add new book It shows in getBook()',()=>{
      // Assert
      expect(newBook).toBe(addedBook[0]);
 })
+
+//Given when I call getBooksByRating(), I should return a list of books that all have that rating.
+
+test('I expect when I call getBooksByRating(), It return the rating of the book',()=>{
+    const rating ="*****"
+
+    bookObject1 = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
+    bookObject2 = new Book('The History', 'J.R.R. Tolkein', 320, 1937);
+    bookObject3 = new Book('The Science', 'J.R.R. Tolkein', 320, 1937);
+    bookObject4 = new Book('The Math', 'J.R.R. Tolkein', 320, 1937);
+
+    readingObject = new ReadingList();
+
+    readingObject.addBook(bookObject1, 'January 1, 2020', 5);
+    readingObject.addBook(bookObject2, 'January 2, 2020', 4);
+    readingObject.addBook(bookObject3, 'January 3, 2020', 3);
+    readingObject.addBook(bookObject4, 'January 4, 2020', 4);
+   
+    const booksByRating = readingObject.getBooksByRating(rating);
+   
+     // Assert
+     expect(newBook).toBe(addedBook[0]);
+})
