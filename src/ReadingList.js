@@ -17,6 +17,19 @@ class ReadingList {
         return this.bookList;
     }
 
+    getBooksByRating(rating){
+        let rate = "";
+        for (let index = 0; index < rating; index++) {
+            rate += "*";
+        }
+
+        const filterByRating = this.bookList.filter(element=>{
+            return element.includes(rate);
+        })
+
+        return filterByRating;
+    }
+
     removeBook(title){
         const indexNumber = this.bookList.forEach((element, index) => {
         if(element.includes(title)){
