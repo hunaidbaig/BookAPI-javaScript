@@ -1,4 +1,13 @@
-function sum(a, b) {
-    return a + b;
-  }
-  module.exports = sum;
+
+class ReadingList{
+    constructor(){
+        this.bookList = []
+    }
+
+    numberRead(){
+        return this.bookList.length;
+    }
+}
+
+module.exports = ReadingList;
+
