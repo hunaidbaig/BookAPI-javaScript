@@ -1,5 +1,13 @@
-const sum = require('../src/index');
+// Given that I visit the site, when I first start, I expect my list to be empty.
+('I expect my list to be empty',()=>{
+    //Arrange
+    const list = 0;
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+    ReadingList readingObject = new ReadingList();
+
+    //Act
+    const okayList = readingObject.numberRead();
+
+    // Assert
+    expect(list).toBe(okayList);
+})
