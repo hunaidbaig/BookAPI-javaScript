@@ -78,3 +78,23 @@ test('I expect removeBook by title',()=>{
      // Assert
      expect(totalBooks).toBe(okayList);
 })
+
+//Given that I have an empty list, when I add a new book I expect getBooks() to return a list of books that includes the book I added.
+
+test('I expect when I add new book It shows in getBook()',()=>{
+    const newBook= "The Hobbit by J.R.R. Tolkein, 320 pages, 1937 read on January 1, 2020, *****";
+
+    bookObject1 = new Book('The Hobbit', 'J.R.R. Tolkein', 320, 1937);
+   
+
+    readingObject = new ReadingList();
+
+    readingObject.addBook(bookObject1, 'January 1, 2020', 5);
+    
+
+    const addedBook = readingObject.getBook();
+   
+
+     // Assert
+     expect(newBook).toBe(addedBook[0]);
+})
